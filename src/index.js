@@ -4,7 +4,8 @@ import model from './model'
 import view from './view'
 /**
  * Displays a Button that is able to be shown as button or as loading spinner.
- * Instalation:
+ * ---
+ * Installation:
  * ```bash
  * $ npm install --save git+https://github.com/chrisAu4000/cycle-burger-menu-button.git
  * ```
@@ -16,7 +17,7 @@ import view from './view'
  * @param {Function} [props.easing = linear ease] - xstream/extra/tween easing function.
  * @returns {Object} {
  *    DOM :: vtree,
- *    state$ :: Stream
+ *    state$ :: Stream,
  *    toggle$ :: Stream
  * }
  * @example <caption>app.js</caption>
