@@ -2,7 +2,8 @@
 
 ## MenuButton(sources, props) ⇒ <code>Object</code>
 Displays a Button that is able to be shown as button or as loading spinner.
-Instalation:
+---
+Installation:
 ```bash
 $ npm install --save git+https://github.com/chrisAu4000/cycle-burger-menu-button.git
 ```
@@ -10,7 +11,7 @@ $ npm install --save git+https://github.com/chrisAu4000/cycle-burger-menu-button
 **Kind**: global function  
 **Returns**: <code>Object</code> - {
    DOM :: vtree,
-   state$ :: Stream
+   state$ :: Stream,
    toggle$ :: Stream
 }  
 
