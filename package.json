@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register test/*.js",
+    "lint": "standard index.js",
     "doc": "jsdoc2md ./src/index.js > README.md",
     "clean": "rimraf build",
     "budo": "budo example/app.js -l -o",
