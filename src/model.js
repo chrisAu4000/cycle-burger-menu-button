@@ -2,7 +2,7 @@ import xs from 'xstream'
 import tween from 'xstream/extra/tween'
 import concat from 'xstream/extra/concat'
 
-const model = (props$, {click$}) => {
+const model = (props$, {toggle$}) => {
   const tweenOpts = props => props.open
     ? {from: 100, to: 0, duration: props.duration, ease: props.easing}
     : {from: 0, to: 100, duration: props.duration, ease: props.easing}
@@ -14,7 +14,7 @@ const model = (props$, {click$}) => {
       .map(props => tween(tweenOpts(props)))
       .flatten()
   )
-  const onClick$ = click$
+  const onClick$ = toggle$
     .mapTo((props) => Object.assign({}, props, {open: !props.open}))
     .fold((state$, transform) => state$.map(transform), props$)
     .flatten()

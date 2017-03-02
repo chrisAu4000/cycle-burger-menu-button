@@ -10,6 +10,7 @@ function main(sources) {
     easing: tween.power4.easeOut
   })
   const menuButton = MenuButton(sources, props$)
+  menuButton.toggle$.imitate(xs.periodic(1000).take(4).debug())
   return {
     DOM: menuButton.DOM
   }

@@ -47,12 +47,13 @@ import view from './view'
 
 const MenuButton = (sources, props$) => {
   const bypass$ = xs.create().mapTo(null)
-  const actions = intent(sources)
-  const state$ = model(props$, actions)
+  const {click$} = intent(sources)
+  const toggle$ = xs.merge(click$, bypass$)
+  const state$ = model(props$, {toggle$})
   const vtree$ = view(state$)
   return {
     DOM: vtree$,
-    state$: actions.click$,
+    state$: click$,
     toggle$: bypass$
   }
 }
