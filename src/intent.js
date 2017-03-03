@@ -1,6 +1,6 @@
 const intent = ({DOM}) => ({
   click$: DOM
-    .select('.menuButton')
+    .select('.menu-button')
     .events('click')
     .mapTo(null)
 })
