@@ -10,7 +10,7 @@ const more50 = compose(not, less50)
 const dom = ({l1x1, l1y1, l1x2, l1y2,
               l2x1, l2y1, l2x2, l2y2,
               l3x1, l3y1, l3x2, l3y2}) =>
-  div('.menuButton', [
+  div('.menu-button', [
     h('svg', [
       h('line', {attrs: {
         x1: l1x1 + '%',
