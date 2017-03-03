@@ -4,8 +4,8 @@ import concat from 'xstream/extra/concat'
 
 const model = (props$, {toggle$}) => {
   const tweenOpts = props => props.open
-    ? {from: 100, to: 0, duration: props.duration, ease: props.easing}
-    : {from: 0, to: 100, duration: props.duration, ease: props.easing}
+    ? {from: 100, to: 0, duration: props.duration, ease: props.easing || tween.linear.ease}
+    : {from: 0, to: 100, duration: props.duration, ease: props.easing || tween.linear.ease}
   const onProps$ = concat(
     props$
       .take(1)
